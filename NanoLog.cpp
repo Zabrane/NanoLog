@@ -648,7 +648,7 @@ namespace nanolog
 		if (m_buffer_base->try_pop(logline))
 		    m_file_writer.write(logline);
 		else
-		    std::this_thread::sleep_for(std::chrono::microseconds(50));
+		    std::this_thread::sleep_for(std::chrono::milliseconds(20));
 	    }
 	    
 	    // Pop and log all remaining entries
